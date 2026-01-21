@@ -1,24 +1,26 @@
 # temperature-converter
 学習用サンプル, simple temperature converter, #Python, __init__method
 import math
+import math
 
 class Temperature:
-  def __init__(self, Celcius, Fahrenheit):
-    self.Celciud = Celcius
-    self.Fehrenheit = Fehrenheit
+    def __init__(self, Celcius, Fahrenheit):
+        self.Celcius = Celcius
+        self.Fehrenheit = Fahrenheit
+        return
 
-  #Converting celcius to fehrenheit
-  def convert_to_Fahrenheit(self, Fahrenheit):
-    rerturn float(self.Celcius * (5/ 9) + 32)       # Formula for converting Fahrenheit to Celcius
+    #Converting celcius tempereture to fehrenheit
+    def convertere_to_Fohrenheit(self, Celcius):
+        return float(self.Celcius * (5 / 9) + 32)       # Formula for converting C temp to F
 
-  #Converting Fehrenheit to Celcius
-    def convert_to_acelcius(self, Fehrenheit):
-      return float((self.Fehrenheit - 32) * 5 / 3)  #formula for converting celcius to fehrenheit
+    #Convertig Fehrenheit to celsius
+    def convertere_to_Celcius(self, Fehrennheit):
+        return float((self.Fehrenheit - 32) * 5 / 3)   # Formula for converting F to C
+        
+C = int(input("Enter Temperaturein Celcius:"))          # Getting C temp from user
+f = int(input("Input Temperature in Fahrenheit:"))      # Getting F temp from user
 
-C = int(input("Input Temperature in Celcius: "))		# Getting C temp from user
-F = int(input("Input Temperature in Fehrenheit: "))	# getting F temp from user
+p1 = Temperature(C, f)
 
-p1 = Temperature(C, F)
-
-print(f"{C}c to Fehrenheit: {p1.convert_to_Fehrenheit("Celcius")}f")
-print(f"{C}c to Fehrenheit: {p1.convert_to_Celcius("Fehrenheit")}c")
+print(f"{C}c to Fehrenheit: {p1.convertere_to_Fohrenheit("Celcius")}f")                    # 
+print(f"{f}f to Celcius :{p1.convertere_to_Celcius("Fehrenheit")}c")
